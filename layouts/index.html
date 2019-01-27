@@ -1,7 +1,8 @@
 {{ define "main" -}}
     {{ .Site.Params.author }}
     {{ .Site.Params.info }}
-    {{ with .Site.Params.social}}
+    {{ with .Site.Params.social }}
+    <div class="social">
         <ul>
             {{ range sort . }}
                 {{ if .icon }}
@@ -11,5 +12,6 @@
                 {{ end }}
             {{ end }}
         </ul>
+    </div>
     {{ end }}
 {{- end }}
