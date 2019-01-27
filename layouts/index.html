@@ -1,4 +1,15 @@
 {{ define "main" -}}
     {{ .Site.Params.author }}
     {{ .Site.Params.info }}
+    {{ with .Site.Params.social}}
+        <ul>
+            {{ range sort . }}
+                {{ if .icon }}
+                    <li><a href="{{ .url }} rel=me"><i class="{{ .icon }}"></i></a></li>
+                {{ else }}
+                    <li><a href="{{ .url }} rel=me">{{ .name }}</a></li>
+                {{ end }}
+            {{ end }}
+        </ul>
+    {{ end }}
 {{- end }}
