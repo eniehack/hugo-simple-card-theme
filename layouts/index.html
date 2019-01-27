@@ -1,6 +1,8 @@
 {{ define "main" -}}
-    {{ .Site.Params.author }}
-    {{ .Site.Params.info }}
+    <div class="about">
+        <h1>{{ .Site.Params.author }}</h1>
+        <h2>{{ .Site.Params.info }}</h2>
+    </div>
     {{ with .Site.Params.social }}
     <div class="social">
         <ul>
