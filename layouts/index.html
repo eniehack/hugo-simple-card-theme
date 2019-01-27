@@ -5,9 +5,9 @@
         <ul>
             {{ range sort . }}
                 {{ if .icon }}
-                    <li><a href="{{ .url }} rel=me"><i class="{{ .icon }}"></i></a></li>
+                    <li><a rel="me" href="{{ .url }}"><i class="{{ .icon }}"></i></a></li>
                 {{ else }}
-                    <li><a href="{{ .url }} rel=me">{{ .name }}</a></li>
+                    <li><a rel="me" href="{{ .url }}">{{ .name }}</a></li>
                 {{ end }}
             {{ end }}
         </ul>
