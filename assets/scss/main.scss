@@ -1,6 +1,29 @@
-.social ul li {
-    display: inline-block;
-    a {
-        color: #212121;
+.content {
+    display: grid;
+    grid-template-columns: repeat(2, 200px);
+    grid-template-rows: 80px 60px 50px;
+    grid-template-areas: 
+        "avatar author"
+        "avatar description"
+        "social social";
+
+    .avatar {
+        grid-area: avatar;
+    }
+    
+    .author {
+        grid-area: author;
+    }
+        
+    .description {
+        grid-area: description;
+    }
+
+    .social ul li {
+        grid-area: social;
+        display: inline-block;
+        a {
+            color: #212121;
+        }
     }
 }
