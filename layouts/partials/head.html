@@ -1,0 +1,13 @@
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+{{ .Hugo.Generator }}
+
+<!-- Enable responsiveness on mobile devices-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+{{ if .IsHome -}}
+<title>{{ .Site.Title }}</title>
+{{- else -}}
+<title>{{ .Title }} &middot; {{ .Site.Title }}</title>
+{{- end }}
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
