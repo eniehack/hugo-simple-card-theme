@@ -1,4 +1,7 @@
 {{ define "main" -}}
+    {{ with .Site.Params.avatarurl }}
+        <div class="avatar"><img src="{{.}}" alt="avatar"></div>
+    {{ end }}
     <div class="about">
         <h1>{{ .Site.Params.author }}</h1>
         <h2>{{ .Site.Params.info }}</h2>
