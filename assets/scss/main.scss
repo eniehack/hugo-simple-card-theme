@@ -1,29 +1,39 @@
-.content {
+#content {
     display: grid;
-    grid-template-columns: repeat(2, 200px);
-    grid-template-rows: 80px 60px 50px;
+    grid-template: 80px 60px 50px 1fr / 200px 200px;
+    grid-row-gap: 10px;
+    grid-column-gap: 30px;
     grid-template-areas: 
         "avatar author"
         "avatar description"
         "social social";
+}
 
-    .avatar {
-        grid-area: avatar;
-    }
+.avatar {
+    grid-area: avatar;
+}
+
+.author {
+    grid-area: author;
+}
     
-    .author {
-        grid-area: author;
-    }
-        
-    .description {
-        grid-area: description;
-    }
+.description {
+    grid-area: description;
+}
 
-    .social ul li {
-        grid-area: social;
-        display: inline-block;
-        a {
-            color: #212121;
+.social {
+    grid-area: social;
+
+    ul {
+        padding: 0px 20px;
+        margin: unset;
+        text-align: center;
+
+        li {
+            display: inline-block;
+            a {
+                color: #212121;
+            }
         }
     }
 }
