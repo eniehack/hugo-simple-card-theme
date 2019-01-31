@@ -1,24 +1,32 @@
 #content {
     display: grid;
-    grid-template: 80px 60px 50px 1fr / 200px 200px;
+    grid-template: 80px 60px 50px 1fr / 150px 150px;
     grid-row-gap: 10px;
     grid-column-gap: 30px;
     grid-template-areas: 
-        "avatar author"
-        "avatar description"
-        "social social";
+        "author avatar"
+        "description avatar"
+        "social social"
+        "table table";
 }
 
 .avatar {
     grid-area: avatar;
+    img {
+        border-radius: 20px;
+        width: 150px;
+        height: 150px;
+    }
 }
 
 .author {
     grid-area: author;
+    text-align: end;
 }
     
 .description {
     grid-area: description;
+    text-align: end;
 }
 
 .social {
@@ -27,13 +35,19 @@
     ul {
         padding: 0px 20px;
         margin: unset;
-        text-align: center;
+        display: flex;
+        justify-content: center;
 
         li {
-            display: inline-block;
+            margin: 5px;
+            list-style-type: none;
             a {
                 color: #212121;
             }
         }
     }
+}
+
+.table {
+    grid-area: table;
 }
