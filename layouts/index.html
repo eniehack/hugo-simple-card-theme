@@ -1,6 +1,6 @@
 {{ define "main" -}}
     <div class="avatar">
-        <img src="{{.}}" alt="avatar">
+        <img src="{{ .Site.Params.avatarurl }}" alt="avatar">
     </div>
     <div class="author">
         <h1>{{ .Site.Params.author }}</h1>
@@ -21,4 +21,7 @@
         </ul>
     </div>
     {{ end }}
+    <div class="table">
+        {{ partial "table.html" . }}
+    </div>
 {{- end }}
